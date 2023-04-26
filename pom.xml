@@ -38,33 +38,14 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		    <plugin>
-		        <groupId>com.microsoft.azure</groupId>
-		        <artifactId>azure-spring-apps-maven-plugin</artifactId>
-		        <version>1.14.0</version>
-		        <configuration>
-		            <subscriptionId>43c8b6ae-13e0-47bf-a0d8-ecde917aa26c</subscriptionId>
-		            <resourceGroup>Azure-Assignment</resourceGroup>
-		            <clusterName>azure123</clusterName>
-		            <appName>ssignment</appName>
-		            <isPublic>true</isPublic>
-		            <deployment>
-		                <cpu>1</cpu>
-		                <memoryInGB>1</memoryInGB>
-		                <instanceCount>1</instanceCount>
-		                <runtimeVersion>Java 11</runtimeVersion>
-		                <resources>
-		                    <resource>
-		                        <filtering/>
-		                        <mergeId/>
-		                        <targetPath/>
-		                        <directory>${project.basedir}/target</directory>
-		                        <includes>
-		                            <include>*.jar</include>
-		                        </includes>
-		                    </resource>
-		                </resources>
-		            </deployment>
-		        </configuration>
+		       <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+            <configuration>
+                <fork>true</fork>
+                <executable>C:\Program Files\Java\jdk1.7.0_45\bin\javac.exe</executable>
+            </configuration>
+        </plugin>
 		    </plugin>
 		</plugins>
 	</build>
